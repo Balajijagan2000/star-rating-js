@@ -25,7 +25,7 @@ const generateStars = () => {
     
 
     for(let i=1;i<=MAX_STARS;i++) {
-        console.log(i)
+      
         startContainer.innerHTML += `<svg
         width="24"
         height="24"
