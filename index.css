@@ -35,6 +35,11 @@ body {
     border-radius: .3em;
 
 }
+.rating-form h3 {
+    color: #fff;
+    margin-bottom: .2em;
+
+}
 .rating-stars {
     
     position: relative;
@@ -60,4 +65,5 @@ body {
     z-index: 1;
     mix-blend-mode: color;
     opacity: 0.7;
+    width: 100%;
 }

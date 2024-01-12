@@ -1,8 +1,13 @@
+//Maximum star rendered on screen
+//Can change the value on you own
 const MAX_STARS = 5
 const rating = document.querySelector('.rating')
 const updateRating = (e) => {
     const ratingValue = Number(e.target.value)
     const overLay = document.querySelector('.overlay')
+    //Eg: the value is 3.5 then what is the percent value of 
+    //3.5 in 100%
+    //3.5/5 * 100 = 70%
     let percent = Math.floor(ratingValue/MAX_STARS * 100)
     percent = 100 - percent
     if(ratingValue > MAX_STARS) {
@@ -12,14 +17,14 @@ const updateRating = (e) => {
         return
     } else {
         overLay.style.width=`${percent}%`
-            
+        return
         
     }
 }
 rating.addEventListener('input',updateRating)
 
 
-
+//Method to render the stars based on the max_value
 const generateStars = () => {
     const startContainer = document.querySelector('.rating-stars')
     
@@ -47,5 +52,6 @@ const generateStars = () => {
     startContainer.append(overLay)
 
 }
+//Calling the method to generate the stars
 generateStars()
 
